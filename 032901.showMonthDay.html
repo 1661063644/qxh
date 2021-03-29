@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="yuefen"/><br>
+			<div v-show="yuefen">
+				<p v-if="yuefen==2">月份有{{yuefen1}}天</p>
+				<p v-if="yuefen==4||yuefen==6||yuefen==9||yuefen==11">月份有{{yuefen2}}天</p>
+				<p v-if="yuefen==1||yuefen==3||yuefen==5||yuefen==7||yuefen==8||yuefen==10||yuefen==12">月份有{{yuefen3}}天</p>
+			</div>
+		</div>
+		
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					yuefen1:28,
+					yuefen2:30,
+					yuefen3:31
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+	</head>
+	<body>
+				红球号码：<p id="app">{{redBalls1}}&nbsp;{{redBalls2}}&nbsp;{{redBalls3}}&nbsp;{{redBalls4}}&nbsp;{{redBalls5}}&nbsp;{{redBalls6}}&nbsp;<br/>蓝球号码:{{buleBalls}}</p>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					redBalls1:Math.floor(Math.random()*33+1),
+					redBalls2:Math.floor(Math.random()*33+1),
+					redBalls3:Math.floor(Math.random()*33+1),
+					redBalls4:Math.floor(Math.random()*33+1),
+					redBalls5:Math.floor(Math.random()*33+1),
+					redBalls6:Math.floor(Math.random()*33+1),
+					buleBalls:Math.floor(Math.random()*16+1)
+				}
+			})
+		</script>
+	</body>
+</html>
